@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+            margin-top: 80px;
+            /* Adjust according to your header height */
+        }
+
+        .section:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+
+        .section:nth-child(even) {
+            background-color: #e9e9e9;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        /* Add animations */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInFromRight {
+            from {
+                transform: translateX(100%);
+            }
+
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animated-left {
+            animation: slideInFromLeft 1s ease-in-out;
+        }
+
+        .animated-right {
+            animation: slideInFromRight 1s ease-in-out;
+        }
+
+        .animated-fade {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="animated-fade">
+        <h1>Welcome to our Landing Page</h1>
+    </header>
+
+    <section class="section animated-left">
+        <h2>Section 1</h2>
+        <p>This is the first section of your landing page.</p>
+    </section>
+
+    <section class="section animated-right">
+        <h2>Section 2</h2>
+        <p>This is the second section of your landing page.</p>
+    </section>
+
+    <section class="section animated-fade">
+        <h2>Section 3</h2>
+        <p>This is the third section of your landing page.</p>
+    </section>
+
+    <footer class="animated-fade">
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
